@@ -1,8 +1,8 @@
 package com.example.mvvm.domin.utils
 
-import com.example.mvvm.data.dto.PostsDto
+import com.example.mvvm.domin.model.Posts
 
 sealed class PostsResult{
-    data class Success(val posts: List<PostsDto>) : PostsResult()
-    data class Error(val exception: Exception) : PostsResult()
+    data class Success(val posts: List<Posts>) : PostsResult()
+    data class Error(val exception: String) : PostsResult()
 }
